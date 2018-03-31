@@ -7,15 +7,37 @@
  * # MainCtrl
  * Controller of the tp7AngularJsApp
  */
-angular.module('tp7AngularJsApp')
-  .controller('MainCtrl', function ($scope, $http) { 
-    $scope.homes = [];
-    $scope.persons = [];
-    $scope.heater = [];
-    $scope.electronis = [];
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+var tpapp = angular.module('tp7AngularJsApp');
+tpapp.factory('kami', ['$resource', function($resource) {
+  var path ;
+  var addPath = function(msg){
+    path =$resource('/rest/home/'),{
+      charge: {method:'GET'}
+     }; 
+    console.log('past her');
+  };
+  return {
+    setPath: function(msg){
+    addPath(msg);
+    },
+    getpath: function(){
+      return path ;
+    }
+  };
+}]);
+
+tpapp.controller('MainCtrl', function ($scope,kami,$http ) { 
+    console.log(" **** ");
+
+    $http.get("/http://localhost:8080/rest/home").then(function (response) {
+      $scope.homes = response.data.pokemon_entries;
+    });
+ 
+
+     kami.setPath('home');
+   // $scope.homes = kami.getpath();
+
+console.log(" **** "+$scope.homes);
+
+
   });
