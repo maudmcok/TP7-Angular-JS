@@ -65,27 +65,15 @@
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <th scope="row">1</th>
-                  <td>Mark</td>
-                  <td>Otto</td>
-                  <td>@mdo</td>
+                <tr ng-repeat="person in persons ">
+                  <th scope="row">{{person.id}}</th>
+                  <td>{{person.name}}</td>
+                  <td>{{person.firstname}}</td>
+                  <td>{{person.mail}}</td>
                   <td>
                     <button type="button" class="btn btn-info">Info</button>
                     <button type="button" class="btn btn-danger">Danger</button>
                   </td>
-                </tr>
-                <tr>
-                  <th scope="row">2</th>
-                  <td>Jacob</td>
-                  <td>Thornton</td>
-                  <td>@fat</td>
-                </tr>
-                <tr>
-                  <th scope="row">3</th>
-                  <td>Larry</td>
-                  <td>the Bird</td>
-                  <td>@twitter</td>
                 </tr>
               </tbody>
             </table>
@@ -109,6 +97,10 @@
                             <td>{{home.adresse}}</td>
                             <td>{{home.nb_pieces}}</td>
                             <td>{{home.taille}}</td>
+                            <td>
+                              <button type="button" class="btn btn-info">Info</button>
+                              <button type="button" class="btn btn-danger">Supprimer</button>
+                            </td>
                   </tr>
                 </tbody>
               </table>

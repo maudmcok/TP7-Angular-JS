@@ -37,6 +37,11 @@ tpapp.controller('MainCtrl', function ($scope,kami,$http ) {
     $http.get("rest/home").then(function (response) {
       $scope.homes = response.data;
     });
+
+    $http.get("rest/person").then(function (response) {
+      $scope.persons = response.data;
+    });
+
 console.log(" **** "+$scope.homes);
 
 
