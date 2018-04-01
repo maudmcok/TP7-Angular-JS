@@ -13,7 +13,7 @@ tpapp.factory('kami', ['$resource', function($resource) {
   var addPath = function(msg){
     path =$resource('/rest/home/'),{
       charge: {method:'GET'}
-     }; 
+     };
     console.log('past her');
   };
   return {
@@ -26,17 +26,17 @@ tpapp.factory('kami', ['$resource', function($resource) {
   };
 }]);
 
-tpapp.controller('MainCtrl', function ($scope,kami,$http ) { 
+tpapp.controller('MainCtrl', function ($scope,kami,$http ) {
     console.log(" **** ");
 
-    $http.get("/http://localhost:8080/rest/home").then(function (response) {
-      $scope.homes = response.data.pokemon_entries;
+
+
+
+    kami.setPath('home');
+    $scope.homes = kami.getpath();
+    $http.get("rest/home").then(function (response) {
+      $scope.homes = response.data;
     });
- 
-
-     kami.setPath('home');
-   // $scope.homes = kami.getpath();
-
 console.log(" **** "+$scope.homes);
 
 

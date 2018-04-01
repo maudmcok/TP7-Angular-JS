@@ -39,7 +39,10 @@
     "node": ">=0.10.0"
   },
   "scripts": {
-    "start" : "grunt serve --proxy-config proxy.config.json",
+    "start": "grunt serve --proxy-config proxy.config.json",
     "test": "karma start test\\karma.conf.js"
+  },
+  "dependencies": {
+    "eslint": "^4.19.1"
   }
 }

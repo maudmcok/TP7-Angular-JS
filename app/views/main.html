@@ -8,7 +8,7 @@
 </div>
 
 
-<div class="container">  
+<div class="container">
     <div class="row">
         <div class="col">
           1
@@ -96,31 +96,19 @@
                 <thead class="thead-dark">
                   <tr>
                     <th scope="col">#</th>
-                    <th scope="col">First</th>
-                    <th scope="col">Last</th>
-                    <th scope="col">Handle</th>
+                    <th scope="col">Adresse</th>
+                    <th scope="col">Nb pieces</th>
+                    <th scope="col">taille</th>
                     <th scope="col"><button type="button" class="btn btn-primary">Ajouter</button></tr>
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                  </tr>
-               
-                  </tr ng-repeat="x in homes ">
-                            <th scope="row">{{x.id}}</th>
-                            <td>{{x.adresse}}</td>
-                            <td>{{x.nb_pieces}}</td>
-                            <td>{{x.taille}}</td>
-                  <tr>
-                 
-                    <th scope="row">3</th>
-                    <td>Larry</td>
-                    <td>the Bird</td>
-                    <td>@twitter</td>
+
+                  <tr ng-repeat="home in homes ">
+                            <th scope="row">{{home.id}}</th>
+                            <td>{{home.adresse}}</td>
+                            <td>{{home.nb_pieces}}</td>
+                            <td>{{home.taille}}</td>
                   </tr>
                 </tbody>
               </table>
