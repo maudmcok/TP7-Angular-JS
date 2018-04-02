@@ -9,7 +9,7 @@
             </div>
             <div class="thumbnail__content text-center">
               <h1 class="heading--primary">Welcome to MI10.</h1>
-              <h2 class="heading--secondary">Add Home on NetWork ?</h2>
+              <h2 class="heading--secondary">Are you born to join the elite ?</h2>
             </div>
             <div class="thumbnail__links">
               <ul class="list-inline m-b-0 text-center">
@@ -24,21 +24,17 @@
           <div class="container__child signup__form">
               <form novalidate>
               <div class="form-group">
-                <label for="Address">Address</label>
+                <label for="username">Address</label>
                 <input class="form-control" type="text" ng-model="home.address" placeholder="Rennes 21" required />
               </div>
               <div class="form-group">
-                <label for="taille">Taille</label>
+                <label for="email">Taille</label>
                 <input class="form-control" type="text" ng-model="home.taille" placeholder="30 m2" required />
               </div>
               <div class="form-group">
-                  <label for="nb_pieces">Nombre de pieces</label>
-                  <input class="form-control" type="nb_pieces" ng-model="home.nb_pieces" placeholder="2" required />
-                </div>
-                <div class="form-group">
-                    <button type="button" class="btn btn-primary" ng-click="add_Heater()" ng-controller="MainCtrl"> Add Heater  = {{heaterCount}} . {{heaterObjs}} </button>
-
-                  </div>
+                <label for="password">Nombre de pieces</label>
+                <input class="form-control" type="nb_pieces" ng-model="home.nb_pieces" placeholder="2" required />
+              </div>
               <div class="m-t-lg">
                 <ul class="list-inline">
                   <li>
@@ -52,7 +48,6 @@
             </form>
           </div>
         </div>
-        value = {{home}}
     <a class="popeye-close-modal" href ng-click="$close()">Close</a>
   </div>
 </div>

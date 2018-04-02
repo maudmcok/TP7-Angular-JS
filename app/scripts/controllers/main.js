@@ -39,10 +39,35 @@ tpapp.controller('MainCtrl', function ($scope,Popeye,kami,$http ) {
       $scope.persons = response.data;
     });
 
-    console.log(" **** "+$scope.homes);
+    $scope.count = 0;
+    $scope.$on('MyEvent', function() {
+      $scope.count++;
+    });
+
+    console.log(" **** ");
+    $scope.homeAdd ;
+    $scope.HomeCount = 0;
+    $scope.$on('addHome', function() {
+      $scope.HomeCount++;
+    });
+
+    var heaterObj= {name: "" , power: "_"};
+
+    $scope.heaterCount = 0;
+    $scope.heaterObjs  = new Array() ;
+    $scope.add_Heater = function() {
+      $scope.heaterCount++;
+      $scope.heaterObjs.push({name: "" , power:  $scope.heaterCount});
+    };
+
+    $scope.electronicAdd ;
+    $scope.electronicCount = 0;
+    $scope.$on('addElectronic', function() {
+      $scope.electronicCount++;
+    });
 
     $scope.openHomeAddForm = function(homeId) {
-console.log("modale ok past")
+    console.log("modale ok past");
       // Open a modal to show the selected user profile
       var modal = Popeye.openModal({
         templateUrl: "../views/home-form.tmpl.html",
