@@ -1,17 +1,60 @@
+<a href="#!main"><h4>Home</h4></a>
+
 <h2>{{currPerson.name}} {{currPerson.firstname}}</h2>
 
-<div class="container">
-  <div class="row">
-    <div class="col-lg-3">
-      <h3>Amis</h3>
-    </div>
-
-    <div class="col-lg-5">
+<div class="">
+  <div class="row ">
+    <div class="col-lg-12 jumbotron">
       <h3>Résidences</h3>
+      <div class="col ">
+        <table class="table">
+          <thead class="thead-dark">
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Adresse</th>
+            <th scope="col">Nb pieces</th>
+            <th scope="col">taille</th>
+            <th scope="col">
+              <button type="button" class="btn btn-primary">Ajouter</button>
+          </tr>
+          </tr>
+          </thead>
+          <tbody>
+
+          <tr ng-repeat="home in currPerson.homes ">
+            <th scope="row">{{home.id}}</th>
+            <td>{{home.adresse}}</td>
+            <td>{{home.nb_pieces}}</td>
+            <td>{{home.taille}}</td>
+            <td>
+              <button type="button" class="btn btn-info">Info</button>
+              <button type="button" class="btn btn-danger">Supprimer</button>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
 
-    <div class="col-lg-4">
+    <div class="col-lg-12 jumbotron">
       <h3>Equipements électroniques</h3>
+      <ul class="col-lg-8 col-lg-offset-2">
+        Phones
+        <li ng-repeat="electro in currPerson.electronicDevices | filter:'marque'">
+          <div class="">
+            {{ electro.name}} {{ electro.marque}} {{ electro.prix}}
+          </div>
+        </li>
+      </ul>
+
+      <ul class="col-lg-8 col-lg-offset-2">
+        Heaters
+        <li ng-repeat="electro in currPerson.electronicDevices | filter:'puissance'">
+          <div class="">
+            {{ electro.name}} {{ electro.marque}} {{ electro.prix}}
+          </div>
+        </li>
+      </ul>
     </div>
   </div>
 </div>
