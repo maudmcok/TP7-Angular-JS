@@ -1,4 +1,4 @@
-<a href="#!main"><h4>Home</h4></a>
+<a href="#!main"><h4>Accueil</h4></a>
 
 <h2>{{currPerson.name}} {{currPerson.firstname}}</h2>
 
@@ -27,7 +27,7 @@
             <td>{{home.nb_pieces}}</td>
             <td>{{home.taille}}</td>
             <td>
-              <button type="button" class="btn btn-info">Info</button>
+              <button type="button" ng-click="goToHome(home)" class="btn btn-info">Info</button>
               <button type="button" class="btn btn-danger">Supprimer</button>
             </td>
           </tr>

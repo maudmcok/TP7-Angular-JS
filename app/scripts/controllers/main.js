@@ -27,12 +27,19 @@ tpapp.factory('kami', ['$resource', function ($resource) {
 
 tpapp.factory('TransCtrlService', function(){
   var person = null;//the object to hold our data
+  var home = null;//the object to hold our data
   return {
     getPerson:function(){
       return person;
     },
     setPerson:function(p){
       person = p;
+    },
+    getHome:function(){
+      return home;
+    },
+    setHome:function(h){
+      home = h;
     }
   };
 
@@ -110,15 +117,29 @@ tpapp.controller('MainCtrl', function ($scope, Popeye, kami, $http, $location, T
     console.log(pers);
     TransCtrlService.setPerson(pers);
     $location.path('person');
-
-  }
+  };
 
 });
 
 
 
-tpapp.controller('PersonCtrl', function ($scope, Popeye, kami, $http, TransCtrlService) {
-console.log("Informations de ");
+tpapp.controller('PersonCtrl', function ($scope, Popeye, kami, $http, TransCtrlService, $location) {
+  console.log("Informations de ");
   $scope.currPerson = TransCtrlService.getPerson();
   console.log($scope.currPerson.firstname);
+
+  $scope.goToHome = function (home) {
+    console.log("Go to home");
+    console.log(home);
+    TransCtrlService.setHome(home);
+    $location.path('home');
+  };
+});
+
+tpapp.controller('HomeCtrl', function ($scope, Popeye, kami, $http, TransCtrlService, $location) {
+  console.log("Informations de home");
+  $scope.currHome = TransCtrlService.getHome();
+  console.log($scope.currHome);
+
+
 });
