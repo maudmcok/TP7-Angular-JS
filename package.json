@@ -43,6 +43,7 @@
     "test": "karma start test\\karma.conf.js"
   },
   "dependencies": {
+    "angular-popeye": "^1.0.5",
     "eslint": "^4.19.1"
   }
 }

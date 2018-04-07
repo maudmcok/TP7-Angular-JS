@@ -7,6 +7,7 @@
 
 
 <div class="container">
+  <a href="#!person"> <h2>About</h2></a>
     <div class="row">
         <div class="col">
           <div class="row">
@@ -72,7 +73,7 @@
                   <td>{{person.firstname}}</td>
                   <td>{{person.mail }}</td>
                   <td>
-                    <button type="button" class="btn btn-info">Info</button>
+                    <a class="btn btn-info" ng-click="goToPerson(person);" href="#">Info</a>
                     <button type="button" class="btn btn-danger">Danger</button>
                   </td>
                 </tr>
