@@ -92,13 +92,13 @@ tpapp.controller('MainCtrl', function ($scope, Popeye, kami, $http, $location, T
       }
     });
 
-    // Show a spinner while modal is resolving dependencies
+    // **Show a spinner while modal is resolving dependencies
     $scope.showLoading = true;
     modal.resolved.then(function () {
       $scope.showLoading = false;
     });
 
-    // Update user after modal is closed
+    // **Update user after modal is closed
     modal.closed.then(function () {
       $scope.showLoading = false;
       //$scope.updateUser();
@@ -118,7 +118,7 @@ tpapp.controller('MainCtrl', function ($scope, Popeye, kami, $http, $location, T
 
 
 tpapp.controller('PersonCtrl', function ($scope, Popeye, kami, $http, TransCtrlService) {
-console.log("Infos de ");
+console.log("Informations de ");
   $scope.currPerson = TransCtrlService.getPerson();
   console.log($scope.currPerson.firstname);
 });
