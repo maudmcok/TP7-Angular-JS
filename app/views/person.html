@@ -37,24 +37,26 @@
     </div>
 
     <div class="col-lg-12 jumbotron">
-      <h3>Equipements électroniques</h3>
-      <ul class="col-lg-8 col-lg-offset-2">
-        Phones
-        <li ng-repeat="electro in currPerson.electronicDevices | filter:'marque'">
-          <div class="">
-            {{ electro.name}} {{ electro.marque}} {{ electro.prix}}
-          </div>
-        </li>
-      </ul>
+      <h3>Phones</h3>
+      <table class="table">
+        <thead class="thead-dark">
+        <tr>
+          <th scope="col">Modele</th>
+          <th scope="col">Marque</th>
+          <th scope="col">Prix</th>
+        </tr>
+        </tr>
+        </thead>
+        <tbody>
 
-      <ul class="col-lg-8 col-lg-offset-2">
-        Heaters
-        <li ng-repeat="electro in currPerson.electronicDevices | filter:'puissance'">
-          <div class="">
-            {{ electro.name}} {{ electro.marque}} {{ electro.prix}}
-          </div>
-        </li>
-      </ul>
+        <tr ng-repeat="home in currPerson.electronicDevices">
+          <td>{{home.name}}</td>
+          <td>{{home.marque}}</td>
+          <td>{{home.prix}}</td>
+        </tr>
+        </tbody>
+      </table>
+
     </div>
   </div>
 </div>
