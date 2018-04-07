@@ -4,7 +4,7 @@
  * @ngdoc overview
  * @name tp7AngularJsApp
  * @description
- * # tp7AngularJsApp
+ * # tp7AngularJsApps
  *
  * Main module of the application.
  */
