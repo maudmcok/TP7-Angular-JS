@@ -59,4 +59,12 @@ La racine est */*.
 | POST    | /devices  |  ajoute un device   |
 
 
+## Auteurs
 
+* **Nabé N. Diarrassouba** (https://github.com/diarranabe)
+* **Nada Ez Zirray** (https://github.com/nadaez)
+* **Charles Oliviers Maud** (https://github.com/maudmcok)
+
+## License
+
+This project is licensed under the GNU License.
