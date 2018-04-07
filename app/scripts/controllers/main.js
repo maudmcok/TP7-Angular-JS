@@ -140,6 +140,4 @@ tpapp.controller('HomeCtrl', function ($scope, Popeye, kami, $http, TransCtrlSer
   console.log("Informations de home");
   $scope.currHome = TransCtrlService.getHome();
   console.log($scope.currHome);
-
-
 });

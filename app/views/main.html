@@ -7,103 +7,73 @@
 
 
 <div class="container">
-    <div class="row">
-        <div class="col">
-          <div class="row">
-            <h4>Nb personnes : {{persons.length}}</h4>
-          </div>
-          <div class="row">
-
-          </div>
-        </div>
-        <div class="col">
-          <div class="row">
-            <h4>Nb Home : {{homes.length}}</h4>
-            <!-- modal test  -->
-
-            <a href ng-click="openHomeAddForm(homes.length)" class="button">TEST.</a>
-
-            <!-- modal test  -->
-          </div>
-          <div class="row">
-
-          </div>
-        </div>
-<!--        <div class="col">
-          3
-          <div class="row">
-            3.1
-              <div class="col-9">
-                  2 of 3 (wider)
-              </div>
-              <div class="col-4">
-                  2 of 3 (4)
-              </div>
-            </div>
-            <div class="row">
-                3.2
-
-              <div class="col-9">
-                  2 of 3 (wider)
-              </div>
-              <div class="col-4">
-                  2 of 3 (4)
-              </div>
-            </div>
-        </div>-->
+  <div class="row">
+    <div class="col">
+      <div class="row">
+        <h4>Nb personnes : {{persons.length}}</h4>
       </div>
       <div class="row">
-          <div class="col">
 
-           <table class="table">
-              <thead class="thead-dark">
-                <tr>
-                  <th scope="col">#</th>
-                  <th scope="col">First</th>
-                  <th scope="col">Last</th>
-                  <th scope="col">Email</th>
-                  <th scope="col"><button type="button" class="btn btn-primary">Ajouter</button></tr>
-                </tr>
-              </thead>
-              <tbody>
-                <tr ng-repeat="person in persons ">
-                  <th scope="row">{{person.id}}</th>
-                  <td>{{person.name}}</td>
-                  <td>{{person.firstname}}</td>
-                  <td>{{person.mail }}</td>
-                  <td>
-                      <button ng-click="goToPerson(person);" class="btn btn-info">Info</button>
-                    <button type="button" class="btn btn-danger">Danger</button>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <div class="col">
-            <table class="table">
-                <thead class="thead-dark">
-                  <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Adresse</th>
-                    <th scope="col">Nb pieces</th>
-                    <th scope="col">taille</th>
-                    <th scope="col"><button type="button" class="btn btn-primary"  >Ajouter</button></tr>
-                  </tr>
-                </thead>
-                <tbody>
-
-                  <tr ng-repeat="home in homes ">
-                            <th scope="row">{{home.id}}</th>
-                            <td>{{home.adresse}}</td>
-                            <td>{{home.nb_pieces}}</td>
-                            <td>{{home.taille}}</td>
-                            <td>
-                              <button type="button" class="btn btn-info">Info</button>
-                              <button type="button" class="btn btn-danger">Supprimer</button>
-                            </td>
-                  </tr>
-                </tbody>
-              </table>
-          </div>
       </div>
+    </div>
+
+    <!--<a href ng-click="openHomeAddForm(homes.length)" class="button">TEST.</a>-->
+
+  </div>
+  <div class="row">
+    <!--<div class="col">-->
+
+      <table class="table">
+        <thead class="thead-dark">
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">First</th>
+          <th scope="col">Last</th>
+          <th scope="col">Email</th>
+          <th scope="col">
+            <!--<button type="button" class="btn btn-primary">Ajouter</button>-->
+        </tr>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="person in persons ">
+          <th scope="row">{{person.id}}</th>
+          <td>{{person.name}}</td>
+          <td>{{person.firstname}}</td>
+          <td>{{person.mail }}</td>
+          <td>
+            <button ng-click="goToPerson(person);" class="btn btn-info">Info</button>
+            <!--<button type="button" class="btn btn-danger">Danger</button>-->
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    <!--</div>-->
+    <!--<div class="col">
+      <table class="table">
+          <thead class="thead-dark">
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Adresse</th>
+              <th scope="col">Nb pieces</th>
+              <th scope="col">taille</th>
+              <th scope="col"><button type="button" class="btn btn-primary"  >Ajouter</button></tr>
+            </tr>
+          </thead>
+          <tbody>
+
+            <tr ng-repeat="home in homes ">
+                      <th scope="row">{{home.id}}</th>
+                      <td>{{home.adresse}}</td>
+                      <td>{{home.nb_pieces}}</td>
+                      <td>{{home.taille}}</td>
+                      <td>
+                        <button type="button" class="btn btn-info">Info</button>
+                        <button type="button" class="btn btn-danger">Supprimer</button>
+                      </td>
+            </tr>
+          </tbody>
+        </table>
+    </div>-->
+  </div>
 </div>
